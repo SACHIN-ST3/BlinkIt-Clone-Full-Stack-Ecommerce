@@ -29,7 +29,7 @@ services:
       - "8080:8080"
 
     env_file:
-      - .env.compose
+      - ./server/.env
 
     depends_on:
       - mongo
@@ -58,11 +58,9 @@ services:
 
 
 volumes:
-
   mongodb_data:
 
 
 networks:
-
   blinkit-network:
     driver: bridge
