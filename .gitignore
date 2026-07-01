@@ -1,0 +1,11 @@
+.env
+.env.compose
+
+client/node_modules
+server/node_modules
+
+client/dist
+
+mongodb_data
+
+*.log
