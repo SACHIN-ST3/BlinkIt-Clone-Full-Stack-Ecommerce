@@ -20,10 +20,12 @@ function App() {
   const location = useLocation()
   
 
-  const fetchUser = async()=>{
-      const userData = await fetchUserDetails()
-      dispatch(setUserDetails(userData.data))
-  }
+ const fetchUser = async()=>{
+    const userData = await fetchUserDetails()
+    if(userData){
+        dispatch(setUserDetails(userData.data))
+    }
+}
 
   const fetchCategory = async()=>{
     try {
