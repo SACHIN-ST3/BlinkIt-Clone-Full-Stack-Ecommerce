@@ -185,8 +185,8 @@ export async function logoutController(request,response){
 
         const cookiesOption = {
             httpOnly : true,
-            secure : true,
-            sameSite : "None"
+            secure : false,
+            sameSite : "Lax"
         }
 
         response.clearCookie("accessToken",cookiesOption)
